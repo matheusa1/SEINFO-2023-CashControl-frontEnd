@@ -23,6 +23,7 @@ module.exports = {
       greenDark: '#015F43',
       redPrimary: '#F75A68',
       outline: '#7C7C8A',
+      outlineLight: '#C4C4CC',
     },
     extend: {
       keyframes: {

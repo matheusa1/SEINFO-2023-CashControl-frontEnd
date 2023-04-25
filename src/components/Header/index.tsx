@@ -26,7 +26,7 @@ const Header = (): ReactElement => {
   }
 
   return (
-    <div className={`flex justify-between items-center`}>
+    <div className={`flex justify-between items-center mb-10`}>
       <Image src={logo} alt={'CashControl Logo'} className="w-36 md:w-auto" />
       <Dialog.Root>
         <Dialog.Trigger asChild>

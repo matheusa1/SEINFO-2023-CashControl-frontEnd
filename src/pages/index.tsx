@@ -1,7 +1,9 @@
+import CardsWrapper from '@/components/CardsWrapper'
+
 export default function Home() {
   return (
     <div>
-      <h1>Teste</h1>
+      <CardsWrapper />
     </div>
   )
 }
