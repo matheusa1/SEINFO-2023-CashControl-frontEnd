@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { ReactElement } from 'react'
 import { IoClose } from 'react-icons/io5'
 
-import logo from '../../../assets/svgs/Logo.svg'
+import logo from '../../assets/svgs/Logo.svg'
 import Button from '../Button'
 import Input from '../Input'
 import Toggle from '../Toggle'
