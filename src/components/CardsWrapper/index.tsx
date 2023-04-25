@@ -5,7 +5,9 @@ import Card from '../Card'
 
 const CardsWrapper = (): ReactElement => {
   return (
-    <div className={`flex gap-3 overflow-x-auto`}>
+    <div
+      className={`flex gap-3 overflow-x-auto md:grid md:grid-cols-3 md:gap-x-8`}
+    >
       <Card
         lastEntry="15 de abril"
         title="Entrada"

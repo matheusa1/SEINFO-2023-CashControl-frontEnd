@@ -27,14 +27,18 @@ const Header = (): ReactElement => {
 
   return (
     <div className={`flex justify-between items-center mb-10`}>
-      <Image src={logo} alt={'CashControl Logo'} className="w-36 md:w-auto" />
+      <Image
+        src={logo}
+        alt={'CashControl Logo'}
+        className="w-36 md:w-auto z-10"
+      />
       <Dialog.Root>
         <Dialog.Trigger asChild>
           <Button>Nova transação</Button>
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Overlay className="fixed inset-0 bg-[#000]/50 animate-overlayShow" />
-          <Dialog.Content className="fixed bottom-0 left-0 bg-blackBg h-fit rounded-t-2xl md:rounded-2xl p-6 animate-contentShow w-full max-w-lg md:animate-contentShowMD md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+          <Dialog.Overlay className="fixed inset-0 bg-[rgba(0,0,0,0.5)] animate-overlayShow z-40" />
+          <Dialog.Content className="z-50 fixed bottom-0 left-0 bg-blackBg h-fit rounded-t-2xl md:rounded-2xl p-6 animate-contentShow w-full max-w-lg md:animate-contentShowMD md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
             <form onSubmit={onHandleSubmit} className="flex flex-col gap-10">
               <header className="flex justify-between items-center">
                 <Dialog.Title className="font-bold text-xl">

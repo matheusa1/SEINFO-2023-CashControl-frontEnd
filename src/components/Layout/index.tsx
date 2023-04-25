@@ -12,7 +12,8 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
       className={`bg-blackBg w-screen overflow-x-hidden min-h-screen px-6 py-16`}
     >
       <Header />
-      <section>{children}</section>
+      <div className="absolute top-0 left-0 w-screen h-56 bg-[#101010] z-0 md:hidden" />
+      <section className="z-10">{children}</section>
     </div>
   )
 }

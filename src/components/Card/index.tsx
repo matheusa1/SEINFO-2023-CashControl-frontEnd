@@ -17,7 +17,7 @@ const Card = ({
 }: CardProps): ReactElement => {
   return (
     <div
-      className={`w-72 ${
+      className={`w-72 md:w-full z-10 ${
         bgGreen ? 'bg-greenDark' : 'bg-blackCard'
       } gap-3 py-6 pr-6 pl-8 rounded-md flex-shrink-0`}
     >
@@ -26,8 +26,11 @@ const Card = ({
         {icon}
       </header>
       <div>
-        <p className="text-2xl font-bold">R$ {value}</p>
-        <p className="text-sm text-outline"> Ultima entrada em {lastEntry}</p>
+        <p className="text-2xl font-bold md:text-4xl">R$ {value}</p>
+        <p className="text-sm text-outline md:hidden">
+          {' '}
+          Ultima entrada em {lastEntry}
+        </p>
       </div>
     </div>
   )
