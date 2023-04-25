@@ -4,10 +4,11 @@ import React, { ReactElement } from 'react'
 import { IoClose } from 'react-icons/io5'
 
 import logo from '../../../assets/svgs/Logo.svg'
-import { Button, Toggle } from '../Button'
-import { Input } from '../Input'
+import Button from '../Button'
+import Input from '../Input'
+import Toggle from '../Toggle'
 
-export const Header = (): ReactElement => {
+const Header = (): ReactElement => {
   const [activeToggle, setActiveToggle] = React.useState<'in' | 'out'>('in')
 
   const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -81,3 +82,5 @@ export const Header = (): ReactElement => {
     </div>
   )
 }
+
+export default Header

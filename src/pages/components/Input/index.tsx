@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-export const Input = ({ ...rest }: InputProps): ReactElement => {
+const Input = ({ ...rest }: InputProps): ReactElement => {
   return (
     <input
       {...rest}
@@ -10,3 +10,5 @@ export const Input = ({ ...rest }: InputProps): ReactElement => {
     />
   )
 }
+
+export default Input
