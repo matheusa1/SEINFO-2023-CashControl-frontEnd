@@ -20,6 +20,7 @@ module.exports = {
       blackInput: '#121214',
       white: '#E1E1E6',
       greenPrimary: '#00875F',
+      greenLight: '#00B37E',
       greenDark: '#015F43',
       redPrimary: '#F75A68',
       outline: '#7C7C8A',

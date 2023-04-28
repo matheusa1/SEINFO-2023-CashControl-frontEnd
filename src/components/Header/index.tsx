@@ -1,3 +1,4 @@
+import { useTransactions } from '@/context/transactionsContext'
 import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'
 import React, { ReactElement } from 'react'
@@ -10,19 +11,23 @@ import Toggle from '../Toggle'
 
 const Header = (): ReactElement => {
   const [activeToggle, setActiveToggle] = React.useState<'in' | 'out'>('in')
+  const { addTransactions } = useTransactions()
 
   const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const data = new FormData(e.currentTarget)
 
-    const transaction = {
-      description: data.get('description'),
-      price: Number(data.get('price')),
-      category: data.get('category'),
+    const transaction = Object.fromEntries(data)
+
+    const obj = {
+      description: String(transaction.description),
+      category: String(transaction.category),
+      price: Number(transaction.price),
       type: activeToggle === 'in',
     }
-    console.log(transaction)
+
+    addTransactions(obj)
   }
 
   return (
